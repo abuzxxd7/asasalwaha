@@ -1,115 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact • Asas Al Waha Technical Services LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asas Al Waha Technical Services LLC</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="assets/logo.png">
+
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand">
-        <img src="assets/logo.svg" alt="Asas Al Waha logo" class="brand-logo" />
-        <div class="brand-text">
-          <span class="brand-title">ASAS AL WAHA</span>
-          <span class="brand-subtitle">TECHNICAL SERVICES LLC</span>
-        </div>
-      </a>
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html#services">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main class="page">
-    <section class="page-hero">
-      <div class="container">
-        <h1>Request a Service</h1>
-        <p>Share your requirements and we will respond with a call or email.</p>
+<div class="page-orbit"></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/logo.png" alt="Asas Al Waha Technical Services LLC logo" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-main">Asas Al Waha</span>
+        <span class="logo-sub">Technical Services LLC</span>
       </div>
-    </section>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <section class="section" id="request">
-      <div class="container contact-grid">
-        <div class="card">
-          <h2>Request Form</h2>
-          <form
-            class="contact-form"
-            action="https://formsubmit.co/info@asasalwaha.com"
-            method="POST"
-          >
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="New enquiry from asasalwaha.com" />
-            <input type="hidden" name="_template" value="box" />
+<main>
+  <section class="page-hero reveal">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>Let&rsquo;s Discuss Your Requirements</h1>
+      <p class="page-hero-sub">
+        Share your details and our team will reach out to coordinate a site visit or quotation.
+      </p>
+    </div>
+  </section>
 
-            <label>
-              Your Name
-              <input type="text" name="name" required />
-            </label>
-
-            <label>
-              Phone (UAE)
-              <input type="tel" name="phone" required />
-            </label>
-
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-
-            <label>
-              Required Service
-              <select name="service" required>
-                <option value="">Select</option>
-                <option>Swimming Pool Maintenance</option>
-                <option>AC / Ventilation</option>
-                <option>Electrical</option>
-                <option>Plumbing / Sanitary</option>
-                <option>Interior Fit‑out / Civil</option>
-                <option>Other</option>
-              </select>
-            </label>
-
-            <label>
-              Project Details
-              <textarea name="details" rows="4" required></textarea>
-            </label>
-
-            <button type="submit" class="btn primary full">Submit Request</button>
-            <p class="form-note">Your message will be sent directly to info@asasalwaha.com.</p>
-          </form>
-        </div>
-
-        <div class="card contact-info">
-          <h2>Direct Contact</h2>
-          <p><strong>Phone:</strong> <a href="tel:+971585844221">+971 58 584 4221</a></p>
-          <p><strong>Email:</strong> <a href="mailto:info@asasalwaha.com">info@asasalwaha.com</a></p>
-          <p><strong>Location:</strong> Dubai, United Arab Emirates</p>
-          <a class="btn full" href="https://wa.me/971585844221" target="_blank" rel="noopener">WhatsApp</a>
+  <section class="section reveal">
+    <div class="container two-col contact-grid">
+      <div class="reveal">
+        <h2>Send an Enquiry</h2>
+        <form onsubmit="alert('Your request has been sent successfully!')" action="https://formsubmit.co/info@asasalwaha.com" method="POST" enctype="text/plain" class="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+971">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="service">Required Service</label>
+            <select id="service" name="service">
+              <option value="">Select</option>
+              <option>Swimming Pool Maintenance</option>
+              <option>AC, Ventilation & Air Filtration</option>
+              <option>Electromechanical / Control Systems</option>
+              <option>Plumbing & Sanitary</option>
+              <option>Tiling & Flooring</option>
+              <option>Painting</option>
+              <option>Carpentry & Partitions</option>
+              <option>Building Cleaning</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Briefly describe your requirements"></textarea>
+          </div>
+          <p class="form-note">
+            
+          </p>
+          <button type="submit" class="btn primary" >Submit</button>
+        </form>
+      </div>
+      <div class="reveal">
+        <h2>Direct Contact</h2>
+        <p><strong>Phone:</strong> <a href="tel:+971585844221">+971 58 584 4221</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@asasalwaha.com">info@asasalwaha.com</a></p>
+        <p><strong>Location:</strong> Dubai, United Arab Emirates</p>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115810.328!2d55.17128!3d25.204849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDubai!5e0!3m2!1sen!2sae!4v1700000000000"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>© 2025 Asas Al Waha Technical Services LLC. All rights reserved.</p>
-      <p class="designer-tag">Designed &amp; Developed by <span>Abu Zaid</span></p>
     </div>
-  </footer>
-
-  <a class="floating-whatsapp" href="https://wa.me/971585844221" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <span>WhatsApp</span>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Asas Al Waha Technical Services LLC</h3>
+      <p>Dubai-based facilities management & technical services company delivering reliable, high-quality solutions.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><strong>Phone:</strong> <a href="tel:+971585844221">+971 58 584 4221</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@asasalwaha.com">info@asasalwaha.com</a></p>
+      <p><strong>Location:</strong> Dubai, United Arab Emirates</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Asas Al Waha Technical Services LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="assets/scripts.js"></script>
+<div class="whatsapp-float">
+  <a href="https://wa.me/971565698123" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    WhatsApp
   </a>
+</div>
 
-  <script src="assets/scripts.js"></script>
 </body>
 </html>
